@@ -16,8 +16,8 @@ macroQ = macro.asfreq('Q', method='ffill')
 popQ = pop.asfreq('Q', method='ffill')
 macroQ
 
-serieI = pd.concat([macroQ, popQ['POSITIVA']], axis=1).dropna()
-serieI
+serieI = pd.concat([macroQ, popQ], axis=1).dropna()
+serieI.columns
 
 #### Linear regression
 
@@ -26,12 +26,24 @@ def reg (X, Y):
     model = regression.linear_model.OLS(Y, X).fit()
     return model.summary()
 
-reg(serieI['Dívida/PIB - %'], serieI['POSITIVA'])
+reg(serieI['POSITIVA'], serieI['Desemprego - %'])
 
+#### Graphics 
 
 plt.style.use('ggplot')
 sns.regplot(data=serieI, 
-            x='Dívida/PIB - %',
-            y='POSITIVA')
+            x='POSITIVA',
+            y='Desemprego - %')
 plt.ylabel('Avaliação positiva')
+plt.xlabel('Desemprego - % da população')
 plt.show()
+
+#### Others graphics
+
+macro.plot(subplots=True)
+plt.show()
+
+
+pop.groupby('PRESIDENTE').plot(subplots=True)
+plt.show()
+
