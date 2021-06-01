@@ -1,5 +1,5 @@
 # Moral Hazard
- ##An approach to moral hazard and policy maker
+##An approach to moral hazard and policy maker
  
 ![image](https://user-images.githubusercontent.com/63247251/120367701-918b6e00-c2e7-11eb-9a07-2a38d9ffc14f.png)
 
