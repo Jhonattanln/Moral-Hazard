@@ -14,5 +14,5 @@
 
 
 ### Appendix
-![image](https://user-images.githubusercontent.com/63247251/120368493-84bb4a00-c2e8-11eb-8597-516cc5d4243b.png)
+
 ![image](https://user-images.githubusercontent.com/63247251/120368526-8edd4880-c2e8-11eb-864f-011c85ffe13a.png)
